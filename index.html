@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Modified by Ronan Legin
+-->
+<html>
+	<head>
+		<title>Ronan Legin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+		<style>
+		.box1{ 
+		width:50%; 
+		float:left; 
+		} 
+		.box2{ 
+		width:50%; 
+		float:right; 
+		} 
+		#imgprob{ 
+				width:100%; 
+		margin:auto; 
+			} 
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="content">
+							<div class="inner">
+								<h1>Ronan Legin</h1>
+								<h5>PhD student in physics at the University of Montreal</h5>
+							</div>
+							<div class="content">
+								<span class="image frontpage" data-position="center"><img src="images/face1.JPG" alt="" /></span>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#about">About</a></li>
+								<li><a href="#research">Research</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="research">
+								<h2 class="major">Research</h2>
+								<h3 class="content">Strong Gravitational Lensing</h3>
+								<p>
+
+								My main research focuses on combining likelihood-free inference, a method for inferring quantities of interest based on realistic simulations, and machine learning to measure the distribution of dark matter substructure in strong lensing galaxies. 
+								Strong
+								gravitational lensing is a phenomenon that occurs when light rays from distant galaxies are deflected by the gravity of foreground matter. 
+								<span class="image cartoon1" data-position="center"><img src="images/neurips_cartoon.png" alt="" /></span>
+								These lensing systems can serve as extremely sensitive probes to answer some of the most important questions in cosmology, one of which concerns the distribution of dark matter on the smallest scales of the universe. Because dark matter can interact gravitationally with light, we can detect its effect on strong lensing images and measure its distribution, revealing invaluable information about the physics of the dark matter particle.</p>
+
+								<h4 class="major">Amortized inference of strong lensing parameters</h4>
+
+								<p>
+									One of my projects consists of inferring uncertainties on predictions of strong lensing parameters obtained using convolutional neural networks (CNN). CNNs are extremely efficient at predicting the parameters that describe strong lensing systems. However, they only provide point estimates with no notion of the uncertainty on their predictions. Turning to simulation-based inference, I use density estimation techniques to solve this problem, by learning a likelihood function of the predictions given the true lensing parameters from repeated simulations and sampling from the posterior using Markov Chain Monte Carlo methods (MCMC). This approach is fast and provides accurate posterior distributions of strong lensing parameters, which makes it suitable for the high number of strong lensing systems expected to be discovered in upcoming surveys. I wrote a paper about this back in October 2021 that was accepted for poster presentation at <a href="https://ml4physicalsciences.github.io/2021/">NeurIPS 2021</a>. My paper can be found <a href="https://arxiv.org/abs/2112.05278">here</a> on the arXiv.
+								</p>
+								<h4 class="major">Probabilistic models for background source reconstruction</h4>
+								<p>
+								Although the main lens deflector can often be described accurately by simple analytic models, the background light source can have a much more complex morphology. For this reason, background sources are sometimes discretized as a grid of pixels in image space to allow for more flexible reconstructions. As a consequence, this turns it into a very high dimensional problem, and when using traditional modeling techniques, strong assumptions are used to make the inference of its posterior distribution tractable (Gaussian prior distribution on the source), which can be inadequate in some cases. One of the projects I'm working on is to instead use machine learning to model the uncertainty of reconstructed image data and to use this to infer the posterior on strong lensing background sources.
+
+
+								<div id="imgprob">
+								    <div class="box1">
+								        <img src="images/source.gif" alt="" height=270 width=270/>
+								 	</div>
+								    <div class="box2">
+								         <img src="images/gan.gif" alt="" height=270 width=270/>
+								   	</div>
+							   	</div>
+							   	As an example of this, on the left, I have samples from a modeled posterior distribution of the background source galaxy using machine learning. As a side project, I am also interested in generative models such as GANs to generate samples of realistic background sources. One motivation for this is that it can be used for on-the-fly generation of strong lensing simulations, which would serve useful in the context of likelihood-free inference. On the right, I show samples of a trained GAN on real galaxy images and how it can smoothly transition between image realizations as you change the values of the latent variables.
+
+								</p>
+								<h3 class="content">Turbulence</h3>
+								<h4 class="major">Machine learning the Subgrid Stress Tensor</h4>
+								<span class="image research"><img src="images/simulation_cropped.gif" alt=""/></span>
+								<p>I also work on general applications of machine learning to turbulence simulations such as using machine learning to learn the subgrid physics of turbulence. A common challenge in hydrodynamical simulations that model turbulence is that they are very computationally expensive. This limits the simulation in resolution, for which the smaller scales of the fluid cannot be resolved. However, because the large scale behavior of turbulence is strongly correlated with the smallest scales, this results in inaccurate simulations. The goal of this project is to use machine learning to model the subgrid scale physics of turbulence and use it as a correction for low resolution simulations.</p>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image about"><img src="images/face2.JPG" alt=""/></span>
+								<p>I am currently a first year PhD student at l'Université de Montréal. Before this, I graduated with a Bachelor of Science in Honours Physics from McGill University. My research interests generally lie in the application of machine learning and statistical frameworks such as likelihood-free inference to strong gravitational lensing.
+
+								I am part of the Parsec research institute in Montreal which focuses on applications of machine learning in astrophysics. In my spare time, I enjoy playing guitar and hiking.</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								If you would like to contact me, please do so at <a href = "mailto: ronan.legin@umontreal.ca">ronan.legin@umontreal.ca</a>.
+
+								My office (B-3441) is located in the physics department at the MIL campus (Université de Montréal) <a href="https://www.google.ca/maps/place/Universit%C3%A9+de+Montr%C3%A9al+-+Campus+MIL/@45.5231104,-73.6218492,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc9199fe37a36dd:0xcfd3c8d7ac8d70f8!8m2!3d45.5231104!4d-73.6196605?hl=en">here</a>.
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Ronan Legin 2022. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
