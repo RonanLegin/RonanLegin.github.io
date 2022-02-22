@@ -2134,6 +2134,7 @@ input, select, textarea {
 		.image img {
 			border-radius: 4px;
 			display: block;
+			float:center;
 		}
 
 		.image.left, .image.right {
@@ -2188,11 +2189,11 @@ input, select, textarea {
 			}
 			.image.research img {
 				width: 100%;
-				margin:0 auto;
+				margin:0rem auto;
 			}
 			.image.about img {
-				width: 60%;
-				margin:0 auto;
+				width: 100%;
+ 				margin:0rem 0rem 0rem 0rem;
 			}
 		@media screen and (max-width: 736px) {
 
