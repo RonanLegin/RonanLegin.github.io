@@ -72,6 +72,26 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Center each icon within its circular button */
+ul.icons li a.button {
+	display: inline-flex;          /* Let us flexbox the link itself */
+	align-items: center;           /* Vertically center icon */
+	justify-content: center;       /* Horizontally center icon */
+	width: 40px;                   /* Fixed width for uniform circle */
+	height: 40px;                  /* Fixed height for uniform circle */
+	border-radius: 50%;            /* Make it round */
+	text-decoration: none;         /* Remove default underline */
+	/* Any other button styles, e.g. background, border, hover effects, etc. */
+  }
+  
+  /* Ensure the icon itself takes up minimal space and doesn't fight line-height */
+  ul.icons li a.button i {
+	line-height: 1; 
+	margin: 0;
+	padding: 0;
+	font-size: 1.2rem; /* Adjust icon size to taste */
+  }
+  
 /* Basic */
 
 	@-ms-viewport {
@@ -3037,7 +3057,7 @@ input, select, textarea {
 			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
 			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
 			position: relative;
-			width: 40rem;
+			width: 90%;
 			max-width: 100%;
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
