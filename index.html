@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Modified by Ronan Legin
+-->
+<style>
+  p {
+    margin-bottom: 20px;
+  }
+</style>
+
+<style>
+	.center {
+        display: block;
+        margin: auto;
+        max-width: 60%;
+        height: auto;
+    }
+    .center2 {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    .left-image {
+        float: left;
+        margin-right: 0px; /* add some space between images */
+        max-width: 50%;
+        height: auto;
+    }
+
+    .right-image {
+        float: right;
+        margin-left: 0px; /* add some space between images */
+        max-width: 50%;
+        height: auto;
+    }
+    .clear {
+        clear: both;
+    }
+</style>
+
+<html>
+	<head>
+		<title>Ronan Legin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+		<style>
+		.box1{ 
+		width:50%; 
+		float:left; 
+		} 
+		.box2{ 
+		width:50%; 
+		float:right; 
+		} 
+		#imgprob{ 
+				width:100%; 
+		margin:auto; 
+			} 
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="content">
+							<div class="inner">
+								<h1>Ronan Legin</h1>
+								<h5>PhD candidate in physics at the University of Montreal</h5>
+							</div>
+							<div class="content">
+								<span class="image frontpage" data-position="center"><img src="images/face1.JPG" alt="" /></span>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#about">About</a></li>
+								<li><a href="#research">Research</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+<!-- Intro -->
+<article id="research">
+	<h2 class="major">Research</h2>
+	<h3 class="content">Machine Learning for Physical Sciences</h3>
+	<div style="text-align:justify;">
+		<p>
+			My research focuses on developing advanced machine learning techniques to tackle complex inference problems in physics, particularly in scenarios involving intricate data structures and challenging noise conditions. I specialize in simulation-based inference, hierarchical Bayesian methods, and deep generative modeling to efficiently extract meaningful insights from observational data.
+		</p>
+		<p>
+			I have specifically applied these methodologies in the domain of <b>strong gravitational lensing</b>, where light from distant galaxies is gravitationally deflected by massive foreground objects, resulting in highly informative yet complex observational data. These systems provide crucial cosmological insights, such as constraining the particle nature of dark matter, but pose significant computational and statistical challenges that machine learning can effectively address. Below, I highlight several specific contributions demonstrating the success of machine learning in strong gravitational lensing.
+		</p>
+	</div>
+
+	<h4 class="major">Accelerated Inference with Simulation-based Methods</h4>
+	<div style="text-align:justify;">
+		<p>
+			I developed accelerated inference algorithms using simulation-based techniques to rapidly and accurately characterize complex parameter spaces. By leveraging neural density estimators, we can efficiently sample posterior distributions, significantly speeding up analysis for large-scale datasets, as demonstrated in strong gravitational lensing surveys.
+		</p>
+		<ul>
+			<li><a href="https://iopscience.iop.org/article/10.3847/1538-4357/aca7c2">Astrophysical Journal Publication</a></li>
+			<li><a href="https://ml4physicalsciences.github.io/2021/">NeurIPS 2021</a></li>
+			<li><a href="https://www.youtube.com/watch?v=UTaXqbK8cCg">LFIParis 2022</a></li>
+		</ul>
+	</div>
+
+	<h4 class="major">Population-Level Hierarchical Inference</h4>
+	<div style="text-align:justify;">
+		<p>
+			I have also pioneered techniques in hierarchical Bayesian inference to accurately interpret populations of astrophysical phenomena. In strong gravitational lensing, this approach includes correcting for observational biases using neural networks, ensuring robust and unbiased inference results.
+			Our methodology was presented at the 2022 International Conference on Machine Learning (ICML).
+			<a href="https://arxiv.org/abs/2207.04123">[paper]</a>
+		</p>
+		<ul>
+			<li><a href="https://iopscience.iop.org/article/10.3847/1538-4357/aca7c2">Astrophysical Journal Publication</a></li>
+			<li><a href="https://ml4physicalsciences.github.io/2021/">NeurIPS 2021</a></li>
+			<li><a href="https://www.youtube.com/watch?v=UTaXqbK8cCg">LFIParis 2022</a></li>
+		</ul>
+	</div>
+
+	<h4 class="major">Score-based Likelihood Characterization (SLIC)</h4>
+	<div style="text-align:justify;">
+		<p>
+			I recently introduced SLIC, a score-based inference framework that accurately characterizes likelihoods in data with highly non-Gaussian noise. This approach leverages score networks trained on realistic noise patterns, enabling robust inference even in datasets severely affected by artifacts, such as those from the Hubble and James Webb Space Telescopes.
+			<a href="https://arxiv.org/abs/2302.03046">[arxiv preprint]</a>
+		</p>
+		<ul>
+			<li><a href="https://arxiv.org/abs/2302.03046">arXiv preprint</a></li>
+		</ul>
+	</div>
+
+	<h3 class="content"> Side Projects </h3>
+	<h4 class="major">Machine Learning for Subgrid-Scale Modeling in Fluid Simulations</h4>
+	<div style="text-align:justify;">
+		<p>
+			I have applied machine learning to improve the accuracy of computationally demanding hydrodynamical simulations by modeling unresolved turbulent physics at subgrid scales. Neural networks trained to predict these smaller-scale effects significantly enhance the reliability of simulations run at reduced resolutions.
+		</p>
+	</div>
+
+	<h4 class="major">Artifact Removal in Astronomical Imaging</h4>
+	<div style="text-align:justify;">
+		<p>
+			In collaboration with the TEMPLATES team, I have developed deep learning models to remove instrumental artifacts from images captured by the James Webb Space Telescope. These models specifically target striped noise patterns, substantially improving image clarity and usability for scientific analysis.
+			<a href="https://github.com/RonanLegin">[Github]</a>
+		</p>
+	</div>
+</article>
+
+						<!-- About -->
+						<article id="about">
+							<h2 class="major">About</h2>
+							<span class="image about"><img src="images/face2.jpg" alt=""/></span>
+							<div style="text-align:justify;">
+								<p>
+									I am currently a fourth-year PhD candidate at the University of Montreal.
+									Before this, I graduated with a Bachelor of Science in Honours Physics from McGill University.
+									My research interests focus on developing machine learning methods for complex inference problems in physics, with particular applications to strong gravitational lensing.
+								</p>
+							</div>
+						</article>
+						
+
+						<!-- Contact -->
+						<article id="contact">
+							<h2 class="major">Contact</h2>
+							<p style="text-align:justify;">
+								If you would like to contact me, please do so at <a href="mailto:ronan.legin@umontreal.ca">ronan.legin@umontreal.ca</a>.
+							</p>
+						
+							<p style="text-align:justify;">
+								My office (B-3441) is located in the physics department at the MIL campus (Université de Montréal).
+							</p>
+						
+							<!-- Social Links -->
+							<ul class="icons" style="padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px;">
+								<li>
+									<a href="https://ca.linkedin.com/in/ronan-legin?trk=people-guest_people_search-card" class="button">
+										<i class="fab fa-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://github.com/RonanLegin" class="button">
+										<i class="fab fa-github"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" class="button">
+										<i class="fa fa-graduation-cap"></i>
+									</a>
+								</li>
+							</ul>
+						</article>
+						
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Ronan Legin 2024. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
