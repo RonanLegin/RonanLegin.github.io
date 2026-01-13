@@ -399,3 +399,55 @@
 					});
 
 })(jQuery);
+
+
+// (function () {
+// 	const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  
+// 	function sleep(ms) {
+// 	  return new Promise((r) => setTimeout(r, ms));
+// 	}
+  
+// 	async function typeText(el, text, speedMs) {
+// 	  el.textContent = "";
+// 	  el.classList.add("type-caret");
+  
+// 	  for (let i = 0; i < text.length; i++) {
+// 		el.textContent += text[i];
+// 		if (!prefersReduced) await sleep(speedMs);
+// 	  }
+  
+// 	  el.classList.remove("type-caret");
+// 	}
+  
+// 	async function runTypingSequence() {
+// 	  // run only once per tab session (optional)
+// 	  if (sessionStorage.getItem("typedOnce") === "1") return;
+// 	  sessionStorage.setItem("typedOnce", "1");
+  
+// 	  const ids = ["type-name", "type-headline", "type-subhead", "type-summary"];
+// 	  const els = ids.map((id) => document.getElementById(id)).filter(Boolean);
+  
+// 	  // If reduced motion, just fill instantly
+// 	  if (prefersReduced) {
+// 		els.forEach((el) => (el.textContent = el.dataset.text || el.textContent));
+// 		return;
+// 	  }
+  
+// 	  // Wait until the opening window animation is basically finished.
+// 	  // Dimension uses delays; this is a safe, simple wait.
+// 	  await sleep(1650);
+  
+// 	  // Type each line; adjust speeds to taste
+// 	  for (const el of els) {
+// 		const text = el.dataset.text || "";
+// 		const speed = el.id === "type-name" ? 35 : 35;
+// 		await typeText(el, text, speed);
+// 		await sleep(180);
+// 	  }
+// 	}
+  
+// 	// Start when page loads
+// 	window.addEventListener("load", runTypingSequence);
+//   })();
+  

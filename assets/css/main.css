@@ -160,8 +160,8 @@ ul.icons li a.button {
 		}
 
 	body, input, select, textarea {
-		color: #ffffff;
-		font-family: "Source Sans Pro", sans-serif;
+		color: #1f2328;
+		font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
@@ -2136,7 +2136,7 @@ ul.icons li a.button {
 		position: relative;
 	}
 
-		.image:before {
+		/* .image:before {
 			pointer-events: none;
 			background-image: url("../../images/overlay.png");
 			background-color: rgba(19, 21, 25, 0.1);
@@ -2149,8 +2149,11 @@ ul.icons li a.button {
 			position: absolute;
 			top: 0;
 			width: 100%;
-		}
-
+		} */
+		.image:before {
+			background-color: rgba(0, 0, 0, 0.03);
+			opacity: 0.25;
+		  }
 		.image img {
 			border-radius: 4px;
 			display: block;
@@ -2643,39 +2646,14 @@ ul.icons li a.button {
 		}
 
 		#bg:before {
-			-moz-transition: background-color 2.5s ease-in-out;
-			-webkit-transition: background-color 2.5s ease-in-out;
-			-ms-transition: background-color 2.5s ease-in-out;
-			transition: background-color 2.5s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.2), rgba(19, 21, 25, 0.2)), url("../../images/overlay.png");
-			background-size: auto,
- 256px 256px;
-			background-position: center,
- center;
-			background-repeat: no-repeat,
- repeat;
+			/* keep your transition lines as-is */
+			background-color: #f5f4f1;
+			background-image: none;
 			z-index: 2;
-		}
-
-		#bg:after {
-			-moz-transform: scale(1.125);
-			-webkit-transform: scale(1.125);
-			-ms-transform: scale(1.125);
-			transform: scale(1.125);
-			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
-			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
-			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
-			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			z-index: 1;
-		}
+		  }
+		  #bg:after {
+			background-color: #f5f4f1;
+		  }
 
 		body.is-article-visible #bg:after {
 			-moz-transform: scale(1.0825);
@@ -2688,10 +2666,12 @@ ul.icons li a.button {
 			filter: blur(0.2rem);
 		}
 
-		body.is-preload #bg:before {
+		/* body.is-preload #bg:before {
 			background-color: #000000;
-		}
-
+		} */
+		body.is-preload #bg:before {
+			background-color: #f5f4f1;
+		  }
 /* Wrapper */
 
 	#wrapper {
@@ -3172,3 +3152,291 @@ ul.icons li a.button {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/*
+  Hero (homepage) layout tweaks for industry/ML positioning.
+  Keeps Dimension's header "window" opening animation (handled by #header .content .inner transitions)
+  but changes the content inside to a photo-left / text-right layout.
+*/
+
+#header .hero {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	gap: 2.25rem;
+	text-align: left;
+	line-height: 1.4;
+  }
+  
+
+  #header .hero-photo:before {
+	display: none; /* remove template overlay on headshot */
+  }
+  
+  #header .hero-photo {
+	flex: 0 0 500px;     /* adjust size as you like */
+	max-width: 500px;
+	border-radius: 16px; /* rounded rectangle */
+	overflow: hidden;
+  }
+  #header .hero-photo img {
+	width: 100%;
+	height: 100%;
+	border-radius: 0;    /* important: don't re-round the image itself */
+	aspect-ratio: 5 / 4;     /* choose shape */
+	object-fit: cover;       /* enables cropping */
+	object-position: 40% center;
+	display: block;
+  }
+  
+  
+  #header .hero-text {
+	flex: 1 1 auto;
+	min-width: 0;
+  }
+  #header .hero-text h1 {
+	font-weight: 700;
+	letter-spacing: -0.01em;   /* Inter can handle a tiny negative */
+	line-height: 1.02;
+  }
+  
+  #header .hero-headline {
+	font-weight: 600;
+	font-size: 1.08rem;
+  }
+  
+  #header .hero-subhead {
+	font-weight: 500;
+	font-size: 0.92rem;
+	opacity: 0.85;
+  }
+  
+  #header .hero-summary {
+	font-weight: 400;
+	font-size: 1.02rem;
+	line-height: 1.7;
+  }
+  
+  
+  
+  @media screen and (max-width: 736px) {
+	#header .hero {
+	  flex-direction: column;
+	  text-align: center;
+	  gap: 1.5rem;
+	  justify-content: flex-start; /* prevents the photo from shifting */
+	}
+
+	#header .hero-photo {
+	  flex-basis: auto;
+	  max-width: 160px;
+	}
+  }
+#header,
+#header h1,
+#header p,
+#header a {
+  color: #1f2328;
+}
+
+/* Light-mode halo behind the opening header window */
+#header {
+	background-image: radial-gradient(
+	  circle at 50% 44%,
+	  rgba(80, 75, 65, 0.00) 0%,
+	  rgba(80, 75, 65, 0.00) 40%,
+	  rgba(80, 75, 65, 0.0) 75%
+	);
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+/*   
+  :root {
+	--ink: #1f2328;                 /* text */
+	--line: rgba(31, 35, 40, 0.35); /* borders/lines */
+  }
+   */
+  :root {
+	--ink: #1f2328;                 /* text */
+	--line: rgba(31, 35, 40, 0.35); /* borders */
+	--accent: #3b5b7a;              /* muted slate blue */
+  }
+  /* Window borders (header + article panels) */
+  #header,
+  #main article {
+	border-color: var(--ink) !important;
+  }
+  
+  /* Nav "window" lines */
+  #header nav ul {
+	border-color: var(--ink) !important;
+  }
+  
+  #header nav ul li {
+	border-left-color: var(--ink) !important;
+  }
+  
+  #header nav a {
+	border-bottom-color: var(--ink) !important;
+  }
+  
+  /* Buttons + form elements outlines (optional but usually needed) */
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  button,
+  .button {
+	box-shadow: inset 0 0 0 1px var(--ink) !important;
+	color: var(--ink) !important;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  select,
+  textarea {
+	box-shadow: inset 0 0 0 1px var(--ink) !important;
+	color: var(--ink) !important;
+	background: transparent;
+  }
+  #header nav:before,
+  #header nav:after,
+  #main article:before,
+  #main article:after {
+	border-color: var(--ink) !important;
+  }
+  :root { --ink: #1f2328; }
+
+/* The two horizontal lines that frame the expanding window */
+#header .content {
+  border-color: var(--ink) !important;
+}
+
+/* The vertical separator lines under the header blocks */
+#header > *:before {
+  background: var(--ink) !important;
+}
+
+#header .content { border-color: var(--line) !important; }
+#header > *:before { background: var(--line) !important; }
+
+
+/* Nav button outlines */
+#header nav ul {
+	border-color: var(--line) !important;
+  }
+  
+  #header nav ul li {
+	border-left-color: var(--line) !important;
+  }
+  
+  #header nav a {
+	border-bottom-color: var(--line) !important;
+	color: var(--ink) !important;
+  }
+
+  /* Optional typewriter caret */
+.type-caret {
+	position: relative;
+  }
+  
+  .type-caret::after {
+	content: "▍";
+	margin-left: 0.08em;
+	animation: blink 1s steps(1) infinite;
+  }
+  
+  @keyframes blink {
+	50% { opacity: 0; }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+	.type-caret::after { animation: none; }
+  }
+
+  #header .content {
+	width: 100%;
+  }
+  
+  #header .content .inner {
+	width: 100%;
+	max-width: 58rem;   /* pick a comfortable max width */
+	margin: 0 auto;     /* keeps the whole window centered */
+  }
+
+
+  @media (prefers-reduced-motion: reduce) {
+	#header .hero-summary,
+	#header .hero-subhead {
+	  transition: none !important;
+	  opacity: 1 !important;
+	  transform: none !important;
+	}
+  }
+
+/* Reduce letter-spacing for ALL CAPS hero lines */
+#header .hero-headline,
+#header .hero-subhead {
+  letter-spacing: 0.14em; /* was likely ~0.25em+ */
+}
+  
+#header .hero-text h1 {
+	letter-spacing: 0.08em !important;
+  }
+  
+  #header .hero-text p {
+	letter-spacing: 0.14em !important;
+  }
+
+  #header nav a:hover {
+	color: var(--accent) !important;
+  }
+
+  #header nav a:hover {
+	border-bottom-color: var(--accent) !important;
+  }
+  #header nav a:hover {
+	border-bottom-color: var(--accent) !important;
+  }
+  
+/* Restore the vertical connector line between nav and content */
+#header nav:before {
+	background: var(--line) !important;
+  }
+  
+
+
+  #header .hero-summary {
+	max-width: 48ch;
+	display: inline-block;
+  }
+  #header .hero-subhead {
+	max-width: 48ch;
+	display: inline-block;
+  }
+  
+  /* Keep headline + subhead in caps */
+#header .hero-headline,
+#header .hero-subhead {
+  text-transform: uppercase !important;
+}
+
+/* Make summary sentence case */
+#header .hero-summary {
+  text-transform: none !important;
+  letter-spacing: 0 !important; /* optional but recommended for sentence case */
+}
+
+#header .hero-photo img {
+	filter: contrast(0.92) brightness(1.03);
+  }
+
+  #header .hero-summary {
+	text-transform: none !important;
+	letter-spacing: 0 !important;
+	font-size: 1.05rem;       /* tiny bump */
+	font-weight: 450;         /* if your font supports it; otherwise 400/500 */
+	line-height: 1.7;
+	color: #1f2328;
+  }
