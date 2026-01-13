@@ -1,0 +1,515 @@
+/* Scroll layout overrides for Dimension (keeps the visual style, removes modal/panel behavior). */
+
+/* Enable normal page flow */
+html, body {
+  height: auto;
+}
+
+body {
+  overflow-y: auto;
+}
+
+/* Wrapper becomes a normal vertical layout */
+#wrapper {
+  min-height: 100vh;
+  height: auto;
+  justify-content: flex-start;
+  padding: 3rem 2rem;
+}
+
+@media screen and (max-width: 736px) {
+  #wrapper {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #wrapper {
+    padding: 1rem;
+  }
+}
+
+/* Keep hero at top */
+#header {
+  margin-bottom: 2.25rem;
+}
+
+/* Sticky top navigation (single source of truth: outline style like the header nav) */
+#topnav {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto 2.25rem auto;
+  position: sticky;
+  top: 1rem;
+  z-index: 4;
+}
+
+#topnav nav ul {
+  display: flex;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+  border: solid 1px var(--line);
+  border-radius: 5px;
+  background: transparent;
+}
+
+#topnav nav ul li {
+  padding-left: 0;
+  border-left: solid 1px var(--line);
+}
+
+#topnav nav ul li:first-child {
+  border-left: 0;
+}
+
+#topnav nav ul li a {
+  display: block;
+  min-width: 7.5rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  padding: 0 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  border-bottom: 0;
+  color: var(--ink);
+}
+
+#topnav nav ul li a:hover {
+  color: var(--accent);
+}
+
+#topnav nav ul li a.active {
+  background: rgba(31, 35, 40, 0.06);
+}
+
+@media screen and (max-width: 736px) {
+  #topnav {
+    top: 0.75rem;
+  }
+  #topnav nav ul {
+    flex-wrap: wrap;
+  }
+  #topnav nav ul li {
+    border-left: 0;
+    border-top: solid 1px var(--line);
+    width: 50%;
+  }
+  #topnav nav ul li:nth-child(1),
+  #topnav nav ul li:nth-child(2) {
+    border-top: 0;
+  }
+  #topnav nav ul li a {
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Main becomes a normal block container */
+#main {
+  display: block;
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/* Articles become always-visible sections */
+#main article {
+  opacity: 1;
+  transform: none;
+  transition: none;
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+
+/* Remove close button (in case older JS injects it) */
+#main article .close {
+  display: none !important;
+}
+
+/* Hero action buttons */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.hero-actions .button {
+  margin: 0;
+}
+
+/* Project blocks */
+.project {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  padding: 1.25rem 1.25rem 0.75rem 1.25rem;
+  margin-bottom: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.project h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.project .meta {
+  opacity: 0.85;
+  margin-bottom: 0.75rem;
+}
+
+.tags {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.75rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags li {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Improve anchor scrolling (with sticky nav) */
+#main article {
+  scroll-margin-top: 6.5rem;
+}
+
+/* Footer spacing */
+#footer {
+  margin-top: 2.5rem;
+}
+
+/* --- Hero CTAs --- */
+/* Small labeled CV button (kept as text for clarity) */
+.hero-ctas a.button.cv-pill {
+  padding: 0.55em 0.95em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  width: auto !important;
+  line-height: 1;
+}
+
+
+/* Content width */
+#main {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Articles become stacked sections */
+#main article {
+  opacity: 1;
+  transform: none;
+  margin: 0 auto 2.25rem auto;
+  width: 100%;
+}
+
+#main article:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure anchor scroll lands cleanly */
+#main article[id] {
+  scroll-margin-top: 5.25rem;
+}
+
+/* Reusable UI bits */
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.actions.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* Project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 980px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  padding: 1.25rem 1.25rem 1rem 1.25rem;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.project h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.project .where {
+  margin-top: -0.25rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+.project ul {
+  margin-bottom: 0.75rem;
+}
+
+.tags {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0.75rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags li {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* Hero buttons (smaller, tighter so the photo fits cleanly) */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-start;
+  margin-top: 1.05rem;
+}
+
+.hero-ctas .button {
+  margin: 0;
+  height: 2.45rem;
+  line-height: 2.45rem;
+  padding: 0 1.05rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.18rem;
+}
+
+/* Icon-only CTAs (more space-efficient) */
+.hero-ctas .button.icon-only {
+  width: 2.55rem;
+  padding: 0;
+  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* for sr-only (absolute) */
+}
+
+.hero-ctas .button.icon-only svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: block;
+}
+
+/* Slightly tighter on very small screens */
+@media screen and (max-width: 480px) {
+  .hero-ctas .button.icon-only {
+    width: 2.4rem;
+  }
+}
+
+
+@media screen and (max-width: 736px) {
+  .hero-ctas {
+    justify-content: center;
+  }
+}
+
+/* Hero availability line */
+#header .hero-note {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Footer spacing */
+#footer {
+  margin-top: 2rem;
+}
+
+/* Two-column layout for About */
+.two-col {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media screen and (max-width: 980px) {
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+ul.clean {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.clean li {
+  padding-left: 0;
+}
+
+
+/* Accessible text for icon-only buttons */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+
+a.button.cv-pill{
+  font-size: 0.9rem;      /* IMPORTANT: override icon-only behavior */
+  line-height: 1;
+  padding: 0.55em 0.95em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  width: auto !important;
+}
+
+/* Single-scroll: remove Dimension's dark modal panel background */
+#main article {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+  box-shadow: none !important;
+}
+
+/* Light-theme cards */
+.project {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid var(--line) !important;
+}
+
+.tags li {
+  border: 1px solid var(--line) !important;
+}
+
+/* Subtle section band behind content */
+.section-inner{
+  background: rgba(0,0,0,0.03);     /* very light tint */
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 18px;
+  padding: 2.25rem 2.25rem;
+  margin: 2rem 0 3rem 0;
+}
+
+/* Mobile spacing */
+@media (max-width: 736px){
+  .section-inner{
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+}
+/* Sticky section nav: give it a readable background */
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #f8f8f8;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 0.75rem 0;
+}
+
+/* ---- FORCE sticky nav background (covers common selectors) ---- */
+#section-nav,
+.section-nav,
+#nav,
+nav#nav,
+nav.section-nav,
+.sticky-nav,
+.scroll-nav {
+  background-color: rgba(248, 248, 248, 0.98) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000 !important;
+}
+
+/* Sometimes the UL/inner wrapper is the transparent thing */
+#section-nav > *,
+.section-nav > *,
+#nav > *,
+nav#nav > * {
+  background-color: rgba(248, 248, 248, 0.98) !important;
+}
+
+/* Sticky nav background (non-transparent) */
+#topnav{
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+
+  background: #f8f8f8 !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Ensure the inner elements don't stay transparent */
+#topnav nav,
+#topnav ul{
+  background: transparent !important;
+}
+
+/* Add a little vertical padding so it feels like a bar */
+#topnav nav{
+  padding: 0.75rem 0;
+}
+
+/* Make bold text readable on light background */
+#main b,
+#main strong,
+.section-inner b,
+.section-inner strong {
+  color: #111 !important;
+  font-weight: 700;
+}

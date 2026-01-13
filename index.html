@@ -5,246 +5,348 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
 	Modified by Ronan Legin
+	Converted to a single-scroll landing page (2026)
 -->
-<style>
-  p {
-    margin-bottom: 20px;
-  }
-</style>
-
-<style>
-	.center {
-        display: block;
-        margin: auto;
-        max-width: 60%;
-        height: auto;
-    }
-    .center2 {
-        display: block;
-        margin: auto;
-        max-width: 100%;
-        height: auto;
-    }
-    .left-image {
-        float: left;
-        margin-right: 0px; /* add some space between images */
-        max-width: 50%;
-        height: auto;
-    }
-
-    .right-image {
-        float: right;
-        margin-left: 0px; /* add some space between images */
-        max-width: 50%;
-        height: auto;
-    }
-    .clear {
-        clear: both;
-    }
-</style>
-
 <html>
 	<head>
 		<title>Ronan Legin</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Ronan Legin — ML & probabilistic modeling for inference under real-world noise. PhD candidate (Université de Montréal), graduating 2026." />
+
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/scroll.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 		<style>
-		.box1{ 
-		width:50%; 
-		float:left; 
-		} 
-		.box2{ 
-		width:50%; 
-		float:right; 
-		} 
-		#imgprob{ 
-				width:100%; 
-		margin:auto; 
-			} 
+			p { margin-bottom: 20px; }
+
+			.center {
+				display: block;
+				margin: auto;
+				max-width: 60%;
+				height: auto;
+			}
+			.center2 {
+				display: block;
+				margin: auto;
+				max-width: 100%;
+				height: auto;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-				<header id="header">
-					<div class="content">
-					  <div class="inner">
+			<!-- Header / Hero -->
+			<header id="header">
+				<div class="content">
+					<div class="inner">
 						<div class="hero">
-						  <span class="image hero-photo">
-							<img src="images/face1.JPG" alt="Headshot of Ronan Legin" />
-						  </span>
-				  
-						  <div class="hero-text">
-							<h1>Ronan Legin</h1>
-						  
-							<p class="hero-headline">
-								Machine Learning &amp; Data Science
-							</p>
-						  
-							<p class="hero-subhead">
-							 	PhD Candidate (Astrophysics), graduating 2026, Université de Montréal
-							</p>
-						  
-							<p class="hero-summary"> I build ML and probabilistic models for inference on complex, high-dimensional data.
-							  Background in astrophysics; focused on applied ML and data science.
-							</p>
-						  </div>
-						  
-						</div>
-					  </div>
-					</div>
-				  
-					<nav>
-					  <ul>
-						<li><a href="#about">About</a></li>
-						<li><a href="#research">Research</a></li>
-						<li><a href="#contact">Contact</a></li>
-					  </ul>
-					</nav>
-				  </header>
-				  
+							<span class="image hero-photo">
+								<img src="images/face1.JPG" alt="Headshot of Ronan Legin" />
+							</span>
 
+							<div class="hero-text">
+								<h1>Ronan Legin</h1>
 
-				<!-- Main -->
-					<div id="main">
-<!-- Intro -->
-<article id="research">
-	<h2 class="major">Research</h2>
-	<h3 class="content">Machine Learning for Physical Sciences</h3>
-	<div style="text-align:justify;">
-		<p>
-			My research focuses on developing advanced machine learning techniques to tackle complex inference problems in physics, particularly in scenarios involving intricate data structures and challenging noise conditions. I specialize in simulation-based inference, hierarchical Bayesian methods, and deep generative modeling to efficiently extract meaningful insights from observational data.
-		</p>
-		<p>
-			I have specifically applied these methodologies in the domain of <b>strong gravitational lensing</b>, where light from distant galaxies is gravitationally deflected by massive foreground objects, resulting in highly informative yet complex observational data. These systems provide crucial cosmological insights, such as constraining the particle nature of dark matter, but pose significant computational and statistical challenges that machine learning can effectively address. Below, I highlight several specific contributions demonstrating the success of machine learning in strong gravitational lensing.
-		</p>
-	</div>
+								<p class="hero-headline">
+									Applied Machine Learning · Probabilistic Modeling · Inference
+								</p>
 
-	<h4 class="major">Accelerated Inference with Simulation-based Methods</h4>
-	<div style="text-align:justify;">
-		<p>
-			I developed accelerated inference algorithms using simulation-based techniques to rapidly and accurately characterize complex parameter spaces. By leveraging neural density estimators, we can efficiently sample posterior distributions, significantly speeding up analysis for large-scale datasets, as demonstrated in strong gravitational lensing surveys.
-		</p>
-		<ul>
-			<li><a href="https://iopscience.iop.org/article/10.3847/1538-4357/aca7c2">Astrophysical Journal Publication</a></li>
-			<li><a href="https://ml4physicalsciences.github.io/2021/">NeurIPS 2021</a></li>
-			<li><a href="https://www.youtube.com/watch?v=UTaXqbK8cCg">LFIParis 2022</a></li>
-		</ul>
-	</div>
+								<p class="hero-subhead">
+									PhD Candidate (Université de Montréal) · Graduating 2026 · Montréal, Canada
+								</p>
 
-	<h4 class="major">Population-Level Hierarchical Inference</h4>
-	<div style="text-align:justify;">
-		<p>
-			I have also pioneered techniques in hierarchical Bayesian inference to accurately interpret populations of astrophysical phenomena. In strong gravitational lensing, this approach includes correcting for observational biases using neural networks, ensuring robust and unbiased inference results.
-			Our methodology was presented at the 2022 International Conference on Machine Learning (ICML).
-			<a href="https://arxiv.org/abs/2207.04123">[paper]</a>
-		</p>
-		<ul>
-			<li><a href="https://iopscience.iop.org/article/10.3847/1538-4357/aca7c2">Astrophysical Journal Publication</a></li>
-			<li><a href="https://ml4physicalsciences.github.io/2021/">NeurIPS 2021</a></li>
-			<li><a href="https://www.youtube.com/watch?v=UTaXqbK8cCg">LFIParis 2022</a></li>
-		</ul>
-	</div>
+								<p class="hero-summary">
+									I build ML systems that produce reliable uncertainty under messy, real-world noise.
+									My work spans score-based / diffusion models, simulation-based inference, and robust statistical modeling—often on high-dimensional scientific imaging.
+								</p>
 
-	<h4 class="major">Score-based Likelihood Characterization (SLIC)</h4>
-	<div style="text-align:justify;">
-		<p>
-			I recently introduced SLIC, a score-based inference framework that accurately characterizes likelihoods in data with highly non-Gaussian noise. This approach leverages score networks trained on realistic noise patterns, enabling robust inference even in datasets severely affected by artifacts, such as those from the Hubble and James Webb Space Telescopes.
-			<a href="https://arxiv.org/abs/2302.03046">[arxiv preprint]</a>
-		</p>
-		<ul>
-			<li><a href="https://arxiv.org/abs/2302.03046">arXiv preprint</a></li>
-		</ul>
-	</div>
+								<div class="hero-ctas">
+									<!-- <a class="button primary cv-pill"
+									href="assets/Ronan_Legin_CV.pdf"
+									aria-label="Download CV (PDF)"
+									title="CV (PDF)">
+								   CV
+								 </a>	-->								
+								 <a class="button icon-only" href="https://github.com/RonanLegin" target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3"/><path d="M16 22v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span class="sr-only">GitHub</span></a>
+									<a class="button icon-only" href="https://ca.linkedin.com/in/ronan-legin?trk=people-guest_people_search-card" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v2"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><span class="sr-only">LinkedIn</span></a>
+									<a class="button icon-only" href="mailto:ronan.legin@umontreal.ca" aria-label="Email Ronan" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg><span class="sr-only">Email</span></a>
+								</div>
 
-	<h3 class="content"> Side Projects </h3>
-	<h4 class="major">Machine Learning for Subgrid-Scale Modeling in Fluid Simulations</h4>
-	<div style="text-align:justify;">
-		<p>
-			I have applied machine learning to improve the accuracy of computationally demanding hydrodynamical simulations by modeling unresolved turbulent physics at subgrid scales. Neural networks trained to predict these smaller-scale effects significantly enhance the reliability of simulations run at reduced resolutions.
-		</p>
-	</div>
-
-	<h4 class="major">Artifact Removal in Astronomical Imaging</h4>
-	<div style="text-align:justify;">
-		<p>
-			In collaboration with the TEMPLATES team, I have developed deep learning models to remove instrumental artifacts from images captured by the James Webb Space Telescope. These models specifically target striped noise patterns, substantially improving image clarity and usability for scientific analysis.
-			<a href="https://github.com/RonanLegin">[Github]</a>
-		</p>
-	</div>
-</article>
-
-						<!-- About -->
-						<article id="about">
-							<h2 class="major">About</h2>
-							<span class="image about"><img src="images/face2.jpg" alt=""/></span>
-							<div style="text-align:justify;">
-								<p>
-									I am currently a fourth-year PhD candidate at the University of Montreal.
-									Before this, I graduated with a Bachelor of Science in Honours Physics from McGill University.
-									My research interests focus on developing machine learning methods for complex inference problems in physics, with particular applications to strong gravitational lensing.
+								<p class="hero-note">
+									Open to <b>ML Engineer</b> / <b>Applied Scientist</b> roles · Summer/Fall 2026.
 								</p>
 							</div>
-						</article>
-						
+						</div>
+					</div>
+				</div>
+			</header>
 
-						<!-- Contact -->
-						<article id="contact">
-							<h2 class="major">Contact</h2>
-							<p style="text-align:justify;">
-								If you would like to contact me, please do so at <a href="mailto:ronan.legin@umontreal.ca">ronan.legin@umontreal.ca</a>.
-							</p>
-						
-							<p style="text-align:justify;">
-								My office (B-3441) is located in the physics department at the MIL campus (Université de Montréal).
-							</p>
-						
-							<!-- Social Links -->
-							<ul class="icons" style="padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px;">
-								<li>
-									<a href="https://ca.linkedin.com/in/ronan-legin?trk=people-guest_people_search-card" class="button">
-										<i class="fab fa-linkedin"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://github.com/RonanLegin" class="button">
-										<i class="fab fa-github"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" class="button">
-										<i class="fa fa-graduation-cap"></i>
-									</a>
-								</li>
+			<!-- Sticky Nav -->
+			<div id="topnav" aria-label="Page navigation">
+				<nav>
+					<ul>
+						<li><a href="#work">Work</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#publications">Publications</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Work / Portfolio -->
+				<article id="work">
+					<div class="section-inner">
+					<h2 class="major">Selected Work</h2>
+					<p>
+						A few representative projects showing how I design, implement, and validate ML systems—especially for inference, uncertainty, and real-world noise.
+					</p>
+
+					<div class="project-grid">
+
+						<section class="project">
+							<h3>Score-Based Likelihood Characterization (SLIC)</h3>
+							<p class="where">NeurIPS 2023 · Robust inference with non-Gaussian noise</p>
+							<ul>
+								<li>Built a score-based framework to model complex likelihoods directly from data (diffusion / score networks).</li>
+								<li>Validated on real telescope imaging affected by structured artifacts; enables calibrated posterior inference when Gaussian noise assumptions fail.</li>
 							</ul>
-						</article>
-						
+							<ul class="tags">
+								<li>Diffusion / Score Models</li>
+								<li>Bayesian Inference</li>
+								<li>Posterior Calibration</li>
+								<li>PyTorch</li>
+							</ul>
+							<div class="actions inline">
+								<a class="button small" href="https://arxiv.org/abs/2302.03046">Paper (arXiv)</a>
+							</div>
+						</section>
+
+						<section class="project">
+							<h3>Artifact removal in real JWST imaging</h3>
+							<p class="where">TEMPLATES Collaboration · Deep learning for structured noise</p>
+							<ul>
+								<li>Developed ML models to remove striped noise artifacts from real JWST images of strongly lensed galaxies.</li>
+								<li>Focused on high-fidelity recovery for downstream scientific measurement (not just visual denoising).</li>
+							</ul>
+							<ul class="tags">
+								<li>Image Restoration</li>
+								<li>Robust Evaluation</li>
+								<li>PyTorch</li>
+							</ul>
+							<div class="actions inline">
+								<a class="button small" href="https://github.com/RonanLegin">Code / Profile</a>
+							</div>
+						</section>
+
+						<section class="project">
+							<h3>Selection-bias correction for population inference</h3>
+							<p class="where">ICML 2022 · Hierarchical inference with neural selection modeling</p>
+							<ul>
+								<li>Addressed survey selection bias when ML models are used as discovery pipelines.</li>
+								<li>Developed an unbiased population-level inference method via hierarchical modeling + learned selection correction.</li>
+							</ul>
+							<ul class="tags">
+								<li>Hierarchical Bayes</li>
+								<li>Bias Correction</li>
+								<li>Density Estimation</li>
+							</ul>
+							<div class="actions inline">
+								<a class="button small" href="https://arxiv.org/abs/2207.04123">Paper (arXiv)</a>
+							</div>
+						</section>
+
+						<section class="project">
+							<h3>Simulation-based inference pipelines (SBI)</h3>
+							<p class="where">NeurIPS 2021 · Density estimation for fast posteriors</p>
+							<ul>
+								<li>Built SBI workflows to produce full posterior distributions over complex physical parameters, without restrictive analytic likelihood assumptions.</li>
+								<li>Designed evaluation & diagnostics to quantify uncertainty and failure modes.</li>
+							</ul>
+							<ul class="tags">
+								<li>Amortized Inference</li>
+								<li>Uncertainty Quantification</li>
+								<li>Neural Density Estimation</li>
+							</ul>
+							<div class="actions inline">
+								<a class="button small" href="https://ml4physicalsciences.github.io/2021/">Workshop</a>
+							</div>
+						</section>
+
+						<section class="project">
+							<h3>ML surrogate modeling for turbulence</h3>
+							<p class="where">Neural networks for subgrid-scale physics</p>
+							<ul>
+								<li>Trained neural models to approximate unresolved turbulent physics (subgrid stress tensor) with high accuracy (~99.5% on benchmark evaluations).</li>
+								<li>Goal: enable faster and more reliable simulation at reduced resolution for downstream forecasting/optimization.</li>
+							</ul>
+							<ul class="tags">
+								<li>Surrogate Modeling</li>
+								<li>Scientific ML</li>
+								<li>Regression</li>
+							</ul>
+						</section>
+
+						<section class="project">
+							<h3>Engineering: pipeline acceleration</h3>
+							<p class="where">HERA collaboration · 6× speedup in official pipeline components</p>
+							<ul>
+								<li>Implemented optimized codepaths that accelerated an anomaly-detection workflow; evaluated and later integrated in the collaboration pipeline.</li>
+								<li>Experience with profiling, algorithmic optimization, and making research code production-ready for teams.</li>
+							</ul>
+							<ul class="tags">
+								<li>Performance</li>
+								<li>Python</li>
+								<li>Reproducibility</li>
+							</ul>
+						</section>
 
 					</div>
+				</div>
+				</article>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Ronan Legin 2026. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+				<!-- About -->
+				<article id="about">
+					<div class="section-inner">
+					<h2 class="major">About</h2>
+
+					<div class="two-col">
+						<div>
+							<p>
+								I’m a PhD candidate at Université de Montréal working at the intersection of machine learning, probabilistic modeling, and scientific inference.
+								I enjoy problems where the hard part is <b>getting uncertainty right</b>: distribution shift, structured noise, selection effects, and high-dimensional posteriors.
+							</p>
+
+							<h3>What I’m looking for</h3>
+							<ul>
+								<li>Roles: ML Engineer, Applied Scientist, Data Scientist (applied ML).</li>
+								<li>Teams that care about evaluation, calibration, and real-world robustness.</li>
+								<li>Start: Summer/Fall 2026 (flexible).</li>
+							</ul>
+
+							<h3>Core strengths</h3>
+							<ul>
+								<li>Diffusion / score models for inference & generative modeling.</li>
+								<li>Simulation-based inference (density estimation, amortization, diagnostics).</li>
+								<li>Uncertainty quantification: calibration, posterior checks, failure-mode analysis.</li>
+								<li>Data + engineering: reproducible research, profiling/optimization, collaboration codebases.</li>
+							</ul>
+						</div>
+
+						<div>
+							<h3>Toolbox</h3>
+							<ul class="clean">
+								<li><b>ML:</b> PyTorch, neural density estimation, diffusion/score models</li>
+								<li><b>Data:</b> NumPy, SciPy, pandas, visualization & reporting</li>
+								<li><b>Software:</b> Git, Linux, experiment tracking (as needed), clean APIs</li>
+							</ul>
+
+							<h3>Highlights</h3>
+							<ul>
+								<li>7-month international research internship at the Flatiron Institute (CCA), Cosmology × ML group (diffusion models + score-based inference).</li>
+								<li>NSERC CGS-D doctoral scholarship recipient (2023).</li>
+								<li>Reviewer for ICML/NeurIPS and MILA PhD admissions committee.</li>
+							</ul>
+<!-- 
+							<div class="actions inline">
+								<a class="button" href="assets/Ronan_Legin_CV.pdf">CV (PDF)</a>
+								<a class="button" href="#contact">Contact</a>
+							</div> -->
+						</div>
+					</div>
+					</div>
+				</article>
+
+				<!-- Publications -->
+				<article id="publications">
+					<div class="section-inner">
+					<h2 class="major">Selected Publications</h2>
+					<p>
+						A short, curated list (full list available on request / CV).
+					</p>
+
+					<ul>
+						<li><b>NeurIPS 2023:</b> Score-Based Likelihood Characterization for Inverse Problems in the Presence of Non-Gaussian Noise.</li>
+						<li><b>ICML 2022:</b> Population-Level Inference of Strong Gravitational Lenses with Neural Network-Based Selection Correction.</li>
+						<li><b>NeurIPS 2021:</b> Simulation-Based Inference of Strong Gravitational Lensing Parameters.</li>
+						<li><b>MNRAS Letters 2023:</b> Posterior Sampling of the Initial Conditions of the Universe using Score-Based Generative Models.</li>
+						<li><b>ApJ Letters 2023:</b> Beyond Gaussian Noise: A Generalized Approach to Likelihood Analysis with non-Gaussian Noise.</li>
+						<li><b>JOSS 2024:</b> Caustics: A Python Package for Accelerated Strong Gravitational Lensing Simulations.</li>
+					</ul>
+					</div>
+				</article>
+
+				<!-- Contact -->
+				<article id="contact">
+					<div class="section-inner">
+					<h2 class="major">Contact</h2>
+
+					<p>
+						Best way to reach me: Email or LinkedIn
+					</p>
+
+					<p>
+						Based in Montréal, Canada. Open to remote or relocation depending on role.
+					</p>
+
+					<ul class="icons" style="padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px;">
+						<li>
+							<a href="https://ca.linkedin.com/in/ronan-legin?trk=people-guest_people_search-card" class="button" aria-label="LinkedIn">
+								<i class="fab fa-linkedin"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/RonanLegin" class="button" aria-label="GitHub">
+								<i class="fab fa-github"></i>
+							</a>
+						</li>
+						<!-- <li>
+							<a href="assets/Ronan_Legin_CV.pdf" class="button" aria-label="CV PDF">
+								<i class="fa fa-file"></i>
+							</a>
+						</li> -->
+						<li>
+							<a href="mailto:ronan.legin@umontreal.ca" class="button" aria-label="Email">
+								<i class="fa fa-envelope"></i>
+							</a>
+						</li>
+					</ul>
+					</div>
+				</article>
 
 			</div>
 
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; Ronan Legin 2026. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</footer>
+
+		</div>
+
 		<!-- BG -->
-			<div id="bg"></div>
+		<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/scroll.js"></script>
+
+		
 
 	</body>
 </html>
